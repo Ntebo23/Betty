@@ -1,5 +1,4 @@
 #!/bin/bash
-+ gcc -c $CFILE
 #include <stdio.h>
 /**
  * main - Entry point
