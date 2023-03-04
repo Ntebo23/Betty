@@ -1,28 +1,23 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-*_strcmp - compare two string.
-*@s1: string.
-*@s2: string.
-*Return: sum
-*/
+ * _strcmp - compares two strings
+ * @s1: first string to compare
+ * @s2: second string to compare
+ *
+ * Return: less than 0 if s1 is less than s2, 0 if they're equal,
+ * more than 0 if s1 is greater than s2
+ */
 int _strcmp(char *s1, char *s2)
 {
-	int sum, j, i;
-
-	for (i = 0; s1[i] != '\0'; i++)
+	while (*s1 == *s2)
 	{
-	}
-	for (j = 0; j < i; j++)
-	{
-		if (s1[j] == s2[j])
+		if (*s1 == '\0')
 		{
-			sum = 0;
+			return (0);
 		}
-		else
-		{
-			sum = s1[j] - s2[j];
-			break;
-		}
+		s1++;
+		s2++;
 	}
-	return (sum);
+	return (*s1 - *s2);
 }
