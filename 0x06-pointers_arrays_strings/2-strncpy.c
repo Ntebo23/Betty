@@ -1,24 +1,29 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- **_strncpy - is function thar add array to other.
- *@dest: array destiny
- *@src: arra origin.
- *@n: integer.
- *Return: dest.
+ * _strncpy - copies a string
+ * @dest: destination string
+ * @src: source string
+ * @n: number of bytes to copy
+ *
+ * Return: pointer to the resulting string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int cont = 0;
+	int i;
 
-	while (cont < n && src[cont] != '\0')
+	i = 0;
+
+	while (src[i] != '\0' && i < n)
 	{
-		dest[cont] = src[cont];
-		cont++;
+		dest[i] = src[i];
+		i++;
 	}
-	while (cont < n)
+
+	while (i < n)
 	{
-		dest[cont] = '\0';
-		cont++;
+		dest[i] = '\0';
+		i++;
 	}
 
 	return (dest);
