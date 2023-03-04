@@ -1,22 +1,28 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-**leet - is as codification function.
-*@s: is string.
-*Return: integer.
-*/
+ * leet - encodes a string in 1337
+ * @s: string to be encoded
+ *
+ * Return: the resulting string;
+ */
 char *leet(char *s)
 {
-	int a, b;
-	char cod[] = {97, 65, 101, 69, 111, 79, 116, 84, 108, 76};
-	char cod_eq[] = {52, 52, 51, 51, 48, 48, 55, 55, 49, 49};
+	int i, j;
 
-	for (a = 0; s[a] != '\0'; a++)
+	char *a = "aAeEoOtTlL";
+	char *b = "4433007711";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (b = 0; cod[b] != '\0'; b++)
+		for (j = 0; j < 10; j++)
 		{
-			if (s[a] == cod[b])
-				s[a] = cod_eq[b];
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+			}
 		}
 	}
+
 	return (s);
 }
