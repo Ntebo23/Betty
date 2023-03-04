@@ -1,22 +1,30 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- **_strcat - is function thar add array to other.
- *@dest: array destiny
- *@src: arra origin.
- *Return: dest.
+ * _strcat - concatenates two strings
+ * @dest: string to append to
+ * @src: string to add
+ *
+ * Return: a pointer to the resulting string
  */
 char *_strcat(char *dest, char *src)
 {
-	int a, b;
+	int i, j;
 
-	for (a = 0; dest[a] != '\0'; a++)
+	i = 0;
+	j = 0;
+
+	while (dest[i] != '\0')
+		i++;
+
+	while (src[j] != '\0')
 	{
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
 
-	for (b = 0; src[b] != '\0'; b++)
-	{
-		dest[a] = src[b];
-		a++;
-	}
+	dest[i] = '\0';
+
 	return (dest);
 }
